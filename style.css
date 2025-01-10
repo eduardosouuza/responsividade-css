@@ -1,0 +1,148 @@
+/* Remove margens padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configuração básica do HTML e Body */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Estilo do vídeo de fundo */
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Container principal */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden;
+  /* Para corrigir problemas de float */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Centraliza verticalmente na tela */
+}
+
+/* Seção da imagem */
+.image-section {
+  width: 50%;
+  text-align: center;
+}
+
+.image-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.image-section img {
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+/* Seção do formulário */
+.form-section {
+  width: 50%;
+  background-color: rgba(29, 27, 27, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background-color: blueviolet;
+  padding: 12px 20px;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkviolet;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* Empilha os elementos verticalmente */
+    height: auto;
+    /* Ajusta o tamanho do container */
+    padding: 40px 0;
+  }
+
+  .image-section,
+  .form-section {
+    width: 100%;
+    margin-bottom: 20px;
+    /* Espaço entre as seções */
+  }
+
+  .image-section img {
+    max-width: 100%;
+  }
+
+  .form-section {
+    padding: 15px;
+    /* Ajusta o espaçamento interno */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-section h1 {
+    font-size: 1.5rem;
+    /* Reduz o tamanho do título */
+  }
+
+  .form-section h2 {
+    font-size: 1.2rem;
+    /* Reduz o tamanho do título do formulário */
+  }
+
+  button {
+    font-size: 0.9rem;
+    /* Botão menor em telas pequenas */
+    padding: 10px 15px;
+  }
+}
